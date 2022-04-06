@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,th,td {
+            border: 1px solid black;border-collapse: collapse;
+            text-align: center;
+            padding: 20px;
+        }
+        thead {
+            background-color: green;
+            color: yellow;
+        }
+        .mauso1 {
+            background-color: aqua;
+        }
+        .mauso2 {
+            background-color: orangered;
+        }
+        .mauso3 {
+            background-color: yellow;
+        }
+        
+    </style>
+</head>
+<body>
+    <table id="table" >
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên</th>
+                <th>CODE</th>
+                <th>IS_ACTIVE</th>
+                <th>Giá</th>
+                <th>Group_ID</th>
+                <th>Tên Nhóm</th>
+            </tr>
+        </thead>
+        <tbody id="bangthongtin">
+        </tbody>
+    <script>
+        var arr = [
+            {
+                "id" : 11,
+                "name" : 'ao thun',
+                "code" : "a-001",
+                "is_active" : 1,
+                "price" : 70000,
+                "group_id" : 1,
+                "group_name" : "Nhóm Hà Nội 1",
+                
+
+            },
+            {
+                "id" : 12,
+                "name" : "quan dui",
+                "code" : "q-001",
+                "is_active" : 1,
+                "price" : 50000,
+                "group_id" : 1,
+                "group_name" : "Nhóm Hà Nội 1",
+                
+
+            },
+            {
+                "id" : 13,
+                "name" : "ao thun",
+                "code" : "a-002",
+                "is_active" : 1,
+                "price" : 60000,
+                "group_id" : 2,
+                "group_name" : "Nhóm Nha Trang",
+                
+
+            },
+            {
+                "id" : 14,
+                "name" : "gi le",
+                "code" : "28478",
+                "is_active" : 1,
+                "price" : 12000,
+                "group_id" : 1,
+                "group_name" : "Nhóm Hà Nội 1",
+                
+
+            },
+            {
+                "id" : 15,
+                "name" : "quan kaki rong",
+                "code" : "r-001",
+                "is_active" : 1,
+                "price" : 20000,
+                "group_id" : 3,
+                "group_name" : "Nhóm Hà Nội 2",
+                
+
+            },
+            {
+                "id" : 16,
+                "name" : "ao so mi",
+                "code" : "a-020",
+                "is_active" : 1,
+                "price" : 80000,
+                "group_id" : 3,
+                "group_name" : "Nhóm Hà Nội 2",
+                
+
+            },
+            {
+                "id" : 17,
+                "name" : "quan dui xanh",
+                "code" : "q-023",
+                "is_active" : 1,
+                "price" : 50000,
+                "group_id" : 2,
+                "group_name" : "Nhóm Nha Trang",
+                
+            }
+
+        ]
+        for (var i = 0 ; i < arr.length ; i++) {
+            // Nếu Group_ID	== 1 thì đổi màu xanh
+            
+            if (arr[i].group_id == 1) { 
+                document.write(
+                    '<tr class="mauso1">'+
+                        '<td>' + (arr[i].id) +'</td>' +
+                        '<td>' + (arr[i].name) +'</td>' +
+                        '<td>' + (arr[i].code) +'</td>' +
+                        '<td>' + (arr[i].is_active) +'</td>' +
+                        '<td>' + (arr[i].price) +'</td>' +
+                        '<td>' + (arr[i].group_id) +'</td>' +
+                        '<td>' + (arr[i].group_name) +'</td>' +
+                    '</tr>'
+                    
+                )
+            }
+            // Nếu Group_ID	== 2 thì đổi màu cam
+
+            else if (arr[i].group_id == 2) {
+                document.write(
+                    '<tr class="mauso2">'+
+                        '<td>' + (arr[i].id) +'</td>' +
+                        '<td>' + (arr[i].name) +'</td>' +
+                        '<td>' + (arr[i].code) +'</td>' +
+                        '<td>' + (arr[i].is_active) +'</td>' +
+                        '<td>' + (arr[i].price) +'</td>' +
+                        '<td>' + (arr[i].group_id) +'</td>' +
+                        '<td>' + (arr[i].group_name) +'</td>' +
+                    '</tr>'
+                    
+                )
+            }
+            // Còn lại thì đổi màu vàngg
+
+            else {
+                document.write(
+                    '<tr class="mauso3">'+
+                        '<td>' + (arr[i].id) +'</td>' +
+                        '<td>' + (arr[i].name) +'</td>' +
+                        '<td>' + (arr[i].code) +'</td>' +
+                        '<td>' + (arr[i].is_active) +'</td>' +
+                        '<td>' + (arr[i].price) +'</td>' +
+                        '<td>' + (arr[i].group_id) +'</td>' +
+                        '<td>' + (arr[i].group_name) +'</td>' +
+                    '</tr>'
+                )
+            }
+            
+            
+            
+        }         
+        /*var i = 0 ;
+        while (i < arr.length) {
+            document.write(
+                '<tr>'+
+                    '<td>' + (arr[i].id) +'</td>' +
+                    '<td>' + (arr[i].name) +'</td>' +
+                    '<td>' + (arr[i].code) +'</td>' +
+                    '<td>' + (arr[i].is_active) +'</td>' +
+                    '<td>' + (arr[i].price) +'</td>' +
+                    '<td>' + (arr[i].group_id) +'</td>' +
+                    '<td>' + (arr[i].group_name) +'</td>' +
+                '</tr>'
+            );
+            i ++;
+        }
+        /*arr.forEach(function(item,index) {
+            document.write(
+                '<tr>'+
+                    '<td>' + (arr[index].id) +'</td>' +
+                    '<td>' + (arr[index].name) +'</td>' +
+                    '<td>' + (arr[index].code) +'</td>' +
+                    '<td>' + (arr[index].is_active) +'</td>' +
+                    '<td>' + (arr[index].price) +'</td>' +
+                    '<td>' + (arr[index].group_id) +'</td>' +
+                    '<td>' + (arr[index].group_name) +'</td>' +
+                '</tr>'
+            )
+        });*/
+        
+        
+    </script>
+    </table>
+</body>
+</html>
